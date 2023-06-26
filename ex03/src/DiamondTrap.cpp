@@ -18,6 +18,7 @@ DiamondTrap & DiamondTrap::operator=(DiamondTrap const & rhs)
 	std::cout << "DiamondTrap Copy Assignement operator called" << std::endl;
 	if (this != &rhs)
 	{
+		this->name = rhs.name;
 		this->hp = rhs.hp;
 		this->ep = rhs.ep;
 		this->ad = rhs.ad;
@@ -34,9 +35,6 @@ DiamondTrap::~DiamondTrap(void)
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), name(name)
 {
 	std::cout << "DiamondTrap Parametric constructor called" << std::endl;
-	this->hp = this->FragTrap::hp;
-	this->ep = this->ScavTrap::ep;
-	this->ad = this->FragTrap::ad;
 	return ;
 }
 

@@ -1,5 +1,4 @@
 #include "../inc/DiamondTrap.hpp"
-#include <iostream>
 
 void	test(DiamondTrap & p1)
 {
@@ -21,7 +20,8 @@ void	test(DiamondTrap & p1)
 	gameState++;
 	std::cout << BLUE;
 	p1.attack("Bandit");
-	p1.takeDamage(5);
+	p1.takeDamage(6);
+	p1.beRepaired(1);
 	p1.beRepaired(1);
 	p1.beRepaired(1);
 	p1.whoAmI();
