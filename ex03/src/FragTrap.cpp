@@ -3,6 +3,9 @@
 FragTrap::FragTrap(void) : ClapTrap("FragTrap", 100, 100, 30)
 {
 	std::cout << "FragTrap Default constructor called" << std::endl;
+	this->hp = 100;
+	this->ep = 100;
+	this->ad = 30;
 	return ;
 }
 
@@ -32,6 +35,9 @@ FragTrap::~FragTrap(void)
 FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)
 {
 	std::cout << "FragTrap Parametric constructor called" << std::endl;
+	this->hp = 100;
+	this->ep = 100;
+	this->ad = 30;
 	return ;
 }
 

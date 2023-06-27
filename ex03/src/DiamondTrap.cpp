@@ -6,7 +6,8 @@ DiamondTrap::DiamondTrap(void) : ClapTrap("Default_clap_name"), name("Default")
 	return ;
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap const & src) : ClapTrap(src)
+DiamondTrap::DiamondTrap(DiamondTrap const & src) : ClapTrap(src) , FragTrap(src)
+	, ScavTrap(src)
 {
 	std::cout << "DiamondTrap Copy constructor called" << std::endl;
 	*this = src;
@@ -35,9 +36,9 @@ DiamondTrap::~DiamondTrap(void)
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), name(name)
 {
 	std::cout << "DiamondTrap Parametric constructor called" << std::endl;
-	this->hp = FragTrap::hp;
-	this->ep = ScavTrap::ep;
-	this->ad = FragTrap::ad;
+	this->hp = this->FragTrap::hp;
+	this->ep = this->ScavTrap::ep;
+	this->ad = this->FragTrap::ad;
 	return ;
 }
 

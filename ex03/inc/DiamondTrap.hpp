@@ -14,9 +14,6 @@ class	DiamondTrap : public FragTrap, public ScavTrap
 
 		DiamondTrap(std::string name);
 		void	whoAmI();
-		using	FragTrap::hp;
-		using	ScavTrap::ep;
-		using	FragTrap::ad;
 		using	ScavTrap::attack;
 	private:
 		std::string	name;

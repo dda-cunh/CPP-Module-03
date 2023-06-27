@@ -23,10 +23,10 @@ class	ClapTrap
 
 		ClapTrap(std::string name);
 		ClapTrap(std::string name, int hp, int ep, int ad);
-		void			attack(const std::string& target);
-		void			takeDamage(unsigned int amount);
-		void			beRepaired(unsigned int amount);
-		void			status(void) const;
+		void		attack(const std::string& target);
+		void		takeDamage(unsigned int amount);
+		void		beRepaired(unsigned int amount);
+		void		status(void) const;
 	protected:
 		std::string	name;
 		int			hp;

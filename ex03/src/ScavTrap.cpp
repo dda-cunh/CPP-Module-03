@@ -3,6 +3,9 @@
 ScavTrap::ScavTrap(void) : ClapTrap("ScavTrap", 100, 50, 20)
 {
 	std::cout << "ScavTrap Default constructor called" << std::endl;
+	this->hp = 100;
+	this->ep = 50;
+	this->ad = 20;
 	return ;
 }
 
@@ -32,6 +35,9 @@ ScavTrap::~ScavTrap(void)
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20)
 {
 	std::cout << "ScavTrap Parametric constructor called" << std::endl;
+	this->hp = 100;
+	this->ep = 50;
+	this->ad = 20;
 	return ;
 }
 
@@ -56,11 +62,11 @@ void	ScavTrap::attack(const std::string& target)
 
 void	ScavTrap::guardGate(void)
 {
-    if (this->hp <= 0)
+	if (this->hp <= 0)
 	{
 		std::cout << "Scavtrap " << this->name + " is dead" << std::endl;
 		return ;
 	}
-    std::cout << this->name + " is now in Gate keeper mode"
+	std::cout << this->name + " is now in Gate keeper mode"
 				<< std::endl;
 }
