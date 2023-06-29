@@ -9,7 +9,7 @@ FragTrap::FragTrap(void) : ClapTrap("FragTrap", 100, 100, 30)
 	return ;
 }
 
-FragTrap::FragTrap(FragTrap const & src)
+FragTrap::FragTrap(FragTrap const & src) : ClapTrap(src)
 {
 	std::cout << "FragTrap Copy constructor called" << std::endl;
 	*this = src;

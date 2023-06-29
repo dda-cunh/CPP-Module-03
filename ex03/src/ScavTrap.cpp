@@ -9,7 +9,7 @@ ScavTrap::ScavTrap(void) : ClapTrap("ScavTrap", 100, 50, 20)
 	return ;
 }
 
-ScavTrap::ScavTrap(ScavTrap const & src)
+ScavTrap::ScavTrap(ScavTrap const & src) : ClapTrap(src)
 {
 	std::cout << "ScavTrap Copy constructor called" << std::endl;
 	*this = src;

@@ -33,7 +33,8 @@ DiamondTrap::~DiamondTrap(void)
 	return ;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), name(name)
+DiamondTrap::DiamondTrap(std::string newName) : ClapTrap(newName + "_clap_name")
+    , name(newName)
 {
 	std::cout << "DiamondTrap Parametric constructor called" << std::endl;
 	this->hp = this->FragTrap::hp;
