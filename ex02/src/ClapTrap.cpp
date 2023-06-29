@@ -32,13 +32,14 @@ ClapTrap::~ClapTrap(void)
 	return ;
 }
 
-ClapTrap::ClapTrap(std::string name) : name(name), hp(10), ep(10), ad(0)
+ClapTrap::ClapTrap(std::string newName) : name(newName), hp(10), ep(10), ad(0)
 {
 	std::cout << "ClapTrap Parametric constructor called" << std::endl;
 	return ;
 }
 
-ClapTrap::ClapTrap(std::string name, int hp, int ep, int ad) : name(name), hp(hp), ep(ep), ad(ad)
+ClapTrap::ClapTrap(std::string newName, int newHp, int newEp, int newAd) : name(newName)
+    , hp(newHp), ep(newEp), ad(newAd)
 {
     std::cout << "ClapTrap full parametric constructor called" << std::endl;
     return ;
